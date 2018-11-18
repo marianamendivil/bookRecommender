@@ -48,6 +48,12 @@ CONTENTS:
 div, article, section, header, footer, nav, li {
 	position:relative;
 }
+
+#brandimage{
+	width: 30%;
+	height: 30%;
+}
+
 .group:after {
 	display:block;
 	height:0;
@@ -277,11 +283,12 @@ h2.pagetitle {
 .navbar-fixed-top .container {
 /* Uncomment to make nav expand full width */
  /*	width: auto; */
+ height: 0;
 }
 .navbar .brand {
 	margin-left:0;
 	padding: 0;
-	margin-top: 1.05em;
+	margin-bottom: 0;
 }
 .navbar .brand a {
 	padding: 0;
@@ -302,10 +309,12 @@ h2.pagetitle {
 }
 .navbar-inner {
 	min-height: 4.75em;
+	border-bottom-width: 0;
 }
 .navbar-inverse .navbar-inner {
 	background-repeat: repeat;
 	background-color: #0b333f;
+	border-bottom-width: 0;
 }
 .navbar-wrapper {
 	overflow:hidden;
@@ -1571,7 +1580,9 @@ i.icon-white {
 	
 	.navbar-inner {
 	 padding-right: 20px;
-	 padding-left: 20px;	
+	 padding-left: 20px;		 
+     border-bottom-width: 0px;
+
 	}
 	
 	.navbar-inner h1.brand {
@@ -1585,6 +1596,8 @@ i.icon-white {
 	.container {
 	 padding-right: 20px;
 	 padding-left: 20px;
+ 	 height: 0;
+
 	}	
 	.navbar-inverse .navbar-inner {
 		padding:0 0 30px;
