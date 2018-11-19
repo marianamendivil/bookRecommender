@@ -174,7 +174,7 @@ blockquote.large:before {
 	margin-right:20px;
 }
 
-blockquote cite 						{ display:block; font-size:12px;}
+blockquote cite 						{ display:block; font-size:20px;}
 blockquote cite:before 					{ content:"\2014 \0020"; }
 blockquote cite a,
 blockquote cite a:visited,
@@ -516,7 +516,7 @@ section.spacer blockquote.large:before {
 }
 
 section.spacer blockquote cite {
-	color:#555;
+	color:#000;
 }
 
 
