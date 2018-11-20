@@ -25,24 +25,19 @@ getAjax("https://www.googleapis.com/books/v1/volumes?q=:" + (path.get('subject')
         }
         var publisher = book["volumeInfo"]["publisher"];
         var publishedDate = book["volumeInfo"]["publishedDate"];
+        var thumbnail = book["volumeInfo"]["imageLinks"]["thumbnail"];
         //var description = book["volumeInfo"]["description"];
         
 
         var str = "<div class='col-md-4'>";
-        var str = "<div class='mdc-card'><div class='card_primary'><h1>"+(title)+"</h1></div><div class='card_primary'><h2>"+(authorS)+"</h2></div><div class='card_primary'>"+(publishedDate)+"</div><div class='mdc-card__actions'>"+
+        var str = "<div class='mdc-card'><div><img src="+(thumbnail)+"></div><div class='card_primary'><h1>"+(title)+"</h1></div><div class='card_primary'><h2>"+(authorS)+"</h2></div><div class='card_primary'>"+(publishedDate)+"</div><div class='mdc-card__actions'>"+
         "<div class='mdc-card__action-icons'> <button class='mdc-icon-button mdc-card__action mdc-card__action--icon' aria-pressed='false' aria-label='Add to favorites' title='Add to favorites'>"+
         "<i class='material-icons mdc-icon-button__icon mdc-icon-button__icon--on'>favorite</i><i class='material-icons mdc-icon-button__icon'>favorite_border</i></button>"+
         "<button class='material-icons mdc-icon-button mdc-card_action mdc-card_action--icon' title='Share'>share</button>"+
         "<button class='material-icons mdc-icon-button mdc-card_action mdc-card_action--icon' title='More options'>more_vert</button></div></div></div>";
         // str += "<div class='card'><img class='card-img-top' src='' alt='card image cap' /></div><div class='card-body'><p>"+(title)+"</p><p>"+(publishedDate)+"</p><p>"+(publisher)+"</p><p>"+(authors)+"</p></div>";
         str += "</div>";
-        
-        console.log(authorS)
-        
-        
 
-        
-        
         $(document).ready(function () {
             $("#rowbebe").append(str);                       
         });
