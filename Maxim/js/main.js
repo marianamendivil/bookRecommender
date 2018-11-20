@@ -23,6 +23,9 @@ getAjax("https://www.googleapis.com/books/v1/volumes?q=:" + (path.get('subject')
                 authorS +=  author + ", ";
             });
         }
+        else{
+            authorS = "Unknown"
+        }
         var publisher = book["volumeInfo"]["publisher"];
         var publishedDate = book["volumeInfo"]["publishedDate"];
         var thumbnail = book["volumeInfo"]["imageLinks"]["thumbnail"];
