@@ -12,6 +12,7 @@ function getAjax(url, success) {
 // example request
 var path = new URLSearchParams(window.location.search);
 
+$(document).ready(function () {
 getAjax("https://www.googleapis.com/books/v1/volumes?q=:" + (path.get('subject')) + "&key=AIzaSyCbZ8Bgts91KrvGCds4KNtf_7rPaT3zhe0", function (data) {
     books = JSON.parse(data)['items'];
     books.forEach(book => {
@@ -30,8 +31,11 @@ getAjax("https://www.googleapis.com/books/v1/volumes?q=:" + (path.get('subject')
         var str = "<div class='col-md-4'>";
         str += "<div class='card'><img class='card-img-top' src='' alt='card image cap' /></div><div class='card-body'><p>"+(title)+"</p><p>"+(publishedDate)+"</p><p>"+(publisher)+"</p><p>"+(description)+"</p><p>"+(authors)+"</p></div>";
         str += "</div>";
-        document.getElementById("rowbebe").innerHTML = str;
-        // document.getElementByClass('card-body').innerHTML(`${}`);
-        //console.log(path.get('subject'))
+        
+        
+            $("#rowbebe").append(str);
+            console.log("hello");
+                       
+        });
     });
 });
