@@ -29,7 +29,7 @@ getAjax("https://www.googleapis.com/books/v1/volumes?q=:" + (path.get('subject')
         
 
         var str = "<div class='col-md-4'>";
-        var str = "<div class='mdc-card'><div class='card_primary'><h1>"+(title)+"</h1></div><div class='card_secondary'><h2>"+(authorS)+"</h2></div><div class='mdc-card__actions'>"+
+        var str = "<div class='mdc-card'><div class='card_primary'><h1>"+(title)+"</h1></div><div class='card_primary'><h2>"+(authorS)+"</h2></div><div class='card_primary'>"+(publishedDate)+"</div><div class='mdc-card__actions'>"+
         "<div class='mdc-card__action-icons'> <button class='mdc-icon-button mdc-card__action mdc-card__action--icon' aria-pressed='false' aria-label='Add to favorites' title='Add to favorites'>"+
         "<i class='material-icons mdc-icon-button__icon mdc-icon-button__icon--on'>favorite</i><i class='material-icons mdc-icon-button__icon'>favorite_border</i></button>"+
         "<button class='material-icons mdc-icon-button mdc-card_action mdc-card_action--icon' title='Share'>share</button>"+
